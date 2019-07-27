@@ -1,0 +1,64 @@
+body {
+    background: url("../../assets/images/GameShowSet.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+h1, h4 {
+    font-family: 'Henny Penny', cursive;
+    font-weight: bold;
+    text-shadow:1px 1px 10px #fff, 1px 1px 10px rgb(243, 242, 229);
+}
+h4 {
+    font-size: 40px;
+    color: red;
+    margin-top: 40px;
+}
+h1 {
+    font-size: 90px;
+    color: yellow;
+}
+.game-div {
+    margin-top: 30px;
+    padding: 30px;
+    border: 10px solid rgb(122, 214, 241);
+    box-shadow: 1px 1px 10px 5px rgb(243, 242, 229), inset 1px 1px 10px 5px rgb(243, 242, 229);
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    width: 74%;
+}
+#countdown {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Days One', sans-serif;
+    font-size: 26px;
+    text-align: center;
+    color: red;
+    background-color: yellow;
+}
+#question {
+    margin-top: 15px;
+    font-family: 'Days One', sans-serif;
+    font-size: 35px;
+    text-align: center;
+    color: black;
+    background: yellow;
+}
+#A, #B, #C, #D {
+    font-family: 'Days One', sans-serif;
+    font-size: 26px;
+    text-align: center;
+    color: yellow;
+}
+#A {
+    margin-top: 25px;
+}
+h2 {
+    font-family: 'Days One', sans-serif;
+    font-size: 120px;
+    text-align: center;
+    color: yellow;
+    text-shadow:1px 1px 10px #fff, 1px 1px 10px rgb(243, 242, 229);
+}
