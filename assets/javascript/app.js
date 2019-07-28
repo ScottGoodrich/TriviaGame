@@ -94,7 +94,7 @@ var questionArr = [
 var lastQuestionIndex = questionArr.length -1;
 var currentQuestionIndex = 0;
 
-newGame();
+/*newGame();
 
 function newGame () {
     theme.play();
@@ -103,7 +103,7 @@ function newGame () {
     correct = 0;
     $(".game-div").on("click", displayQuestion()
     );
-}
+}*/
 
 function displayQuestion() {
     var q = questionArr[currentQuestionIndex];
