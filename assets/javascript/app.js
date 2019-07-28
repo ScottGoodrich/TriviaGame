@@ -4,9 +4,10 @@ var theme = new Audio('../TriviaGame/assets/sounds/intro.wav');
 var rightAudio = new Audio("../TriviaGame/assets/sounds/ascend.mp3");
 var wrongAudio = new Audio("../TriviaGame/assets/sounds/fart.mp3");
 var gameOver = new Audio("../TriviaGame/assets/sounds/gameEnd.mp3");
+var correct = 0;
 
-function countdown() {
-}
+
+
 var questionArr = [
     {
     question: "In the Coen brothers' film \"The Big Lebowski\", what item \'really tied the room together\'?",
@@ -93,39 +94,50 @@ var questionArr = [
 var lastQuestionIndex = questionArr.length -1;
 var currentQuestionIndex = 0;
 
-function displayQuestion () {
+newGame();
+
+function newGame () {
+    theme.play();
+    clearInterval(counter);
+    $(".game-div").html("<h6>Click Here To Start!</h6>");
+    correct = 0;
+    $(".game-div").on("click", displayQuestion()
+    );
+}
+
+function displayQuestion() {
     var q = questionArr[currentQuestionIndex];
-    $("#question").html("<p>" + q.question + "<p>");
+    $("#question").html("<h3>" + q.question + "</h3>");
     $("#A").html(q.choiceA);
     $("#B").html(q.choiceB);
     $("#C").html(q.choiceC);
     $("#D").html(q.choiceD);
+    questionTimer();
 }
 currentQuestionIndex = 0;
 displayQuestion();
+currentQuestionIndex++;
 
-/*function newGame() {
-    theme.play();
-    var correct = 0;
-    var wrong = 0;
-    for (var i = 0; i < questionArr.length; i++) {
-        $("#question").text(questionArr[i].question);
-        console.log(questionArr[i].question);
-        var response = questionArr[i].question;
-        if (response === questionArr[i].answer) {
-            rightAudio.play();
-            correct++;
-            $(".game-div").html("<h2>NAILED IT!<h2>");
-        } else {
-            wrongAudio.play();
-            wrong++;
-            $(".game-div").html("<h2>NOPE.<h2>");
-        }
+
+var seconds = 10;
+
+var counter = setInterval(questionTimer, 1000);
+
+function questionTimer() {
+    if (seconds >= 0) {
+        seconds--;
+        $("#counter").html("<p>00:" + seconds + "</p>");
+    } if (seconds < 10) {
+        $("#counter").html("<p>00:0" + seconds + "</P");
+    } if (seconds < 0) {
+        clearInterval(counter);
+        $("#counter").empty();
+        wrongAudio.play();
+        $(".game-div").html("<h2>NOPE.</h2>");
     }
-    
-    }*/
-
-
-newGame();
-gameOver.play();
+}
+/*function gameEnd() {
+    $(".game-div").html("<p>You got " + correct + " out of 10 correct</p>");
+    gameOver.play();
+}*/
 });

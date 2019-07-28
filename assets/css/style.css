@@ -29,11 +29,11 @@ h1 {
     align-content: center;
     width: 74%;
 }
-#countdown {
+#counter {
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 2px;
     font-family: 'Days One', sans-serif;
-    font-size: 26px;
+    font-size: 30px;
     text-align: center;
     color: red;
     background-color: yellow;
@@ -44,7 +44,7 @@ h1 {
     font-size: 35px;
     text-align: center;
     color: black;
-    background: yellow;
+    background-color: yellow;
 }
 #A, #B, #C, #D {
     font-family: 'Days One', sans-serif;
@@ -61,4 +61,24 @@ h2 {
     text-align: center;
     color: yellow;
     text-shadow:1px 1px 10px #fff, 1px 1px 10px rgb(243, 242, 229);
+}
+p {
+    font-family: 'Days One', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: red;
+}
+h3 {
+    font-family: 'Days One', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: black;
+    padding: 15px;
+}
+h6 {
+    font-family: 'Days One', sans-serif;
+    font-size: 60px;
+    text-align: center;
+    color: yellow;
+    padding: 15px;
 }
